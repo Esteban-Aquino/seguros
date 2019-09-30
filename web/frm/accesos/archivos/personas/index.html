@@ -1,0 +1,206 @@
+<div id="panel-formulario" class="panel panel-primary">
+    <div class="panel-heading centrado">
+        Personas
+    </div>
+    <form id="formularioPersona">  
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="id_persona" class="form-control-static">Id</label>
+                        </div>          
+                        <div class="col-md-2">
+                            <input type="text"
+                                   id="id_persona"
+                                   name="id_persona"
+                                   class="form-control input-sm"
+                                   value="0"
+                                   placeholder="Id">
+                        </div>
+                        <div class="col-md-1">
+                            <button type="button" id="botonBuscar" 
+                                    class="btn btn-primary btn-sm"
+                                    onclick="cargar_busqueda('frm/accesos/archivos/personas/buscar_persona.html')">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="nombre_persona" class="form-control-static">Nombre</label>
+                        </div>          
+                        <div class="col-md-6">
+                            <input type="text"
+                                   id="nombre_persona"
+                                   name="nombre_persona"
+                                   class="form-control input-sm"
+                                   placeholder="Nombre">
+                        </div>
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <input type="checkbox" 
+                                           aria-label="Persona Fisica"
+                                           id="fisica_persona"
+                                           name ="fisica_persona">
+                                </span>
+                                <span class="input-group-addon">Persona Fisica</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="nombre_fantasia_persona" class="form-control-static">Nombre Fantasia</label>
+                        </div>          
+                        <div class="col-md-9">
+                            <input type="text"
+                                   id="nombre_fantasia_persona"
+                                   name="nombre_fantasia_persona"
+                                   class="form-control input-sm"
+                                   placeholder="Nombre Fantasia">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="direccion_persona" class="form-control-static">Direccion</label>
+                        </div>          
+                        <div class="col-md-9">
+                            <input type="text"
+                                   id="direccion_persona"
+                                   name="direccion_persona"
+                                   class="form-control input-sm"
+                                   placeholder="Direccion">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 centrado">
+                    <div class="row">
+                        <img id="verImagenPersona" src="img/usuarios/0.jpg" alt="" class="img-circle" style="height: 160px; margin: 5px;"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="telefono1_persona" class="form-control-static">Telefono 1</label>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="text"
+                                   id="telefono1_persona"
+                                   name="telefono1_persona"
+                                   class="form-control input-sm"
+                                   placeholder="Telefono 1">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="telefono2_persona" class="form-control-static">Telefono 2</label>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="text"
+                                   id="telefono2_persona"
+                                   name="telefono2_persona"
+                                   class="form-control input-sm"
+                                   placeholder="Telefono 2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="email_persona" class="form-control-static">E-Mail</label>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="email"
+                                   id="email_persona"
+                                   name="email_persona"
+                                   class="form-control input-sm"
+                                   placeholder="E-Mail">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="web_persona" class="form-control-static">Pagina Web</label>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="text"
+                                   id="web_persona"
+                                   name="web_persona"
+                                   class="form-control input-sm"
+                                   placeholder="Pagina web">
+                        </div>
+                    </div>
+                </div>          
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="ci_persona" class="form-control-static">CI:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text"
+                                   id="ci_persona"
+                                   name="ci_persona"
+                                   class="form-control input-sm"
+                                   placeholder="Cedula">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="ruc_persona" class="form-control-static">RUC:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text"
+                                   id="ruc_persona"
+                                   name="ruc_persona"
+                                   class="form-control input-sm"
+                                   placeholder="Ruc">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="dni_persona" class="form-control-static">DNI:</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text"
+                                   id="dni_persona"
+                                   name="dni_persona"
+                                   class="form-control input-sm"
+                                   placeholder="Dni">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="fecha_nacimiento_persona" class="form-control-static">Fecha Nac.:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text"
+                                   id="fecha_nacimiento_persona"
+                                   name="fecha_nacimiento_persona"
+                                   class="form-control input-sm"
+                                   placeholder="Fecha de nacimiento">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="oculto">
+            <input id="imagenPersona" type="file" accept="image/*" />
+        </div>
+    </form>
+    <div class="panel-footer centrado">
+        <button type="button" id="botonGuardar" class="btn btn-primary btn-sm">
+            <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Guardar
+        </button>
+        <button type="button" id="botonEliminar" class="btn btn-primary btn-sm">
+            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Eliminar
+        </button>
+        <button  type="button" id="botonSalir" class="btn btn-primary btn-sm">
+            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Salir
+        </button>
+    </div>
+    <script src="frm/accesos/archivos/personas/js/funciones.js" type="text/javascript"></script>
+    <script>
+                                        inicializarFrmPersonas();
+    </script>
+</div>

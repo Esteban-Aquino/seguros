@@ -1,0 +1,128 @@
+<div id="panel-formulario" class="panel panel-primary">
+    <div class="panel-heading centrado">
+        Clientes
+    </div>
+    <form id="formularioCliente">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="id_cliente" class="form-control-static">Id</label>
+                </div>          
+                <div class="col-md-2">
+                    <input type="text"
+                           id="id_cliente"
+                           name="id_cliente"
+                           class="form-control input-sm"
+                           value="0"
+                           placeholder="Id">
+                </div>
+                <div class="col-md-1">
+                    <button type="button" id="botonBuscar" 
+                            class="btn btn-primary btn-sm"
+                            onclick="cargar_busqueda('frm/clientes/buscar_cliente.html')">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="col-md-2">
+                    <label for="id_persona_cliente" class="form-control-static">Persona</label>
+                </div>          
+                <div class="col-md-2">
+                    <input type="text"
+                           id="id_persona_cliente"
+                           name="id_persona_cliente"
+                           class="form-control input-sm"
+                           placeholder="Id">
+                </div>
+                <div class="col-md-1">
+                    <button type="button" id="botonBuscarPersona" 
+                            class="btn btn-primary btn-sm"
+                            onclick="cargar_busqueda('frm/clientes/buscar_persona.html')">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="nombre_persona_cliente" class="form-control-static">Nombre</label>
+                </div>          
+                <div class="col-md-10">
+                    <input type="text"
+                           id="nombre_persona_cliente"
+                           name="nombre_persona_cliente"
+                           readonly="readonly"
+                           class="form-control input-sm"
+                           placeholder="Nombre">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="id_cobrador" class="form-control-static">Cobrador</label>
+                </div>          
+                <div class="col-md-2">
+                    <input type="text"
+                           id="id_cobrador"
+                           name="id_cobrador"
+                           class="form-control input-sm"
+                           placeholder="Id">
+                </div>
+                <div class="col-md-1">
+                    <button type="button" id="botonBuscarCobrador" 
+                            class="btn btn-primary btn-sm"
+                            onclick="cargar_busqueda('frm/clientes/buscar_cobrador.html')">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="col-md-7">
+                    <input type="text"
+                           id="nombre_persona_cobrador"
+                           name="nombre_persona_cobrador"
+                           class="form-control input-sm"
+                           placeholder="Nombre del cobrador"
+                           readonly="readonly">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="id_vendedor" class="form-control-static">Vendedor</label>
+                </div>          
+                <div class="col-md-2">
+                    <input type="text"
+                           id="id_vendedor"
+                           name="id_vendedor"
+                           class="form-control input-sm"
+                           placeholder="Id">
+                </div>
+                <div class="col-md-1">
+                    <button type="button" id="botonBuscarVendedor" 
+                            class="btn btn-primary btn-sm"
+                            onclick="cargar_busqueda('frm/clientes/buscar_vendedor.html')">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="col-md-7">
+                    <input type="text"
+                           id="nombre_persona_vendedor"
+                           name="nombre_persona_vendedor"
+                           class="form-control input-sm"
+                           placeholder="Nombre del vendedor"
+                           readonly="readonly">
+                </div>
+            </div>
+            
+    </form>
+    <div class="panel-footer centrado">
+        <button type="button" id="botonGuardar" class="btn btn-primary btn-sm">
+            <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Guardar
+        </button>
+        <button type="button" id="botonEliminar" class="btn btn-primary btn-sm">
+            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Eliminar
+        </button>
+        <button  type="button" id="botonSalir" class="btn btn-primary btn-sm">
+            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Salir
+        </button>
+    </div>
+    <script src="frm/clientes/js/funciones.js" type="text/javascript"></script>
+    <script>
+        inicializarFrmClientes();
+    </script>
+</div>

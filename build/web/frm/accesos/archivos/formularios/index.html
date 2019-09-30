@@ -1,0 +1,138 @@
+<div id="panel-formulario" class="panel panel-primary">
+    <div class="panel-heading centrado">
+        Formularios
+    </div>
+    <form id="formularioFormulario">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="id_formulario" class="form-control-static">Id</label>
+                </div>          
+                <div class="col-md-2">
+                    <input type="text"
+                           id="id_formulario"
+                           name="id_formulario"
+                           class="form-control input-sm"
+                           value="0"
+                           placeholder="Id">
+                </div>
+                <div class="col-md-1">
+                    <button type="button" id="botonBuscar" 
+                            class="btn btn-primary btn-sm"
+                            onclick="cargar_busqueda('frm/accesos/archivos/formularios/buscar_formulario.html')">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="nombre_formulario" class="form-control-static">Nombre</label>
+                </div>          
+                <div class="col-md-10">
+                    <input type="text"
+                           id="nombre_formulario"
+                           name="nombre_formulario"
+                           class="form-control input-sm"
+                           placeholder="Nombre">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="url_formulario" class="form-control-static">Url</label>
+                </div>          
+                <div class="col-md-10">
+                    <input type="text"
+                           id="url_formulario"
+                           name="url_formulario"
+                           class="form-control input-sm"
+                           placeholder="Url">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="id_sistema" class="form-control-static">Sistema</label>
+                </div>          
+                <div class="col-md-2">
+                    <input type="text"
+                           id="id_sistema"
+                           name="id_sistema"
+                           class="form-control input-sm"
+                           placeholder="Id">
+                </div>
+                <div class="col-md-1">
+                    <button type="button" id="botonBuscarSistema" 
+                            class="btn btn-primary btn-sm"
+                            onclick="cargar_busqueda('frm/accesos/archivos/formularios/buscar_sistema.html')">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <input type="text"
+                           id="nombre_sistema"
+                           name="nombre_sistema"
+                           class="form-control input-sm"
+                           placeholder="Nombre del sistema"
+                           readonly="readonly">
+                </div>
+                <div class="col-md-4">
+                    <input type="text"
+                           id="url_sistema"
+                           name="url_sistema"
+                           class="form-control input-sm"
+                           placeholder="Url Sistema"
+                           readonly="readonly">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="id_submenu" class="form-control-static">Submenu</label>
+                </div>          
+                <div class="col-md-2">
+                    <input type="text"
+                           id="id_submenu"
+                           name="id_submenu"
+                           class="form-control input-sm"
+                           placeholder="Id">
+                </div>
+                <div class="col-md-1">
+                    <button type="button" id="botonBuscarSubmenu" 
+                            class="btn btn-primary btn-sm"
+                            onclick="cargar_busqueda('frm/accesos/archivos/formularios/buscar_submenu.html')">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <input type="text"
+                           id="nombre_submenu"
+                           name="nombre_submenu"
+                           class="form-control input-sm"
+                           placeholder="Nombre del Submenu"
+                           readonly="readonly">
+                </div>
+                <div class="col-md-4">
+                    <input type="text"
+                           id="url_submenu"
+                           name="url_submenu"
+                           class="form-control input-sm"
+                           placeholder="Url Submenu"
+                           readonly="readonly">
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="panel-footer centrado">
+        <button type="button" id="botonGuardar" class="btn btn-primary btn-sm">
+            <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Guardar
+        </button>
+        <button type="button" id="botonEliminar" class="btn btn-primary btn-sm">
+            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Eliminar
+        </button>
+        <button  type="button" id="botonSalir" class="btn btn-primary btn-sm">
+            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Salir
+        </button>
+    </div>
+    <script src="frm/accesos/archivos/formularios/js/funciones.js" type="text/javascript"></script>
+    <script>
+        inicializarFrmFormularios();
+    </script>
+</div>

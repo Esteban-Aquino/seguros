@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Leader Brokers</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/animate.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+        <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        
+        <nav class="animated fadeInLeft">
+            <div class="centrado">
+                <img id="logoMenu" src="img/logo.png" alt="" /><!--class="animated zoomIn"
+                <!--<img src="img/logo-guata-pora-2.png" alt="" />-->
+            </div>
+            <!--<ul id='menu'>
+                
+            </ul>-->
+            <div id="menu">
+                
+            </div>
+        </nav>
+        <main>
+            <div id="barra-herramientas" class="animated fadeInDown">
+                <span id="boton-menu" class="glyphicon glyphicon-menu-left float-izquierda" 
+                      aria-hidden="true">
+                </span>
+                <ol class="breadcrumb float-izquierda">
+                    <li><a href="#" id="s_nombre_empresa"></a></li>
+                    <li><a href="#" id="s_nombre_sucursal"></a></li>
+                    <li><a href="#" id="s_nombre_deposito"></a></li>
+                    <li><a href="#" id="s_usuario_usuario"></a></li>
+                    <li><a href="#" id="s_nombre_rol"></a></li>
+                    <li id="s_nombre_formulario" class="active"></li>
+                </ol>
+                <span id="boton-logout" class="glyphicon glyphicon-log-out float-derecha" aria-hidden="true"></span>
+                <span id="boton-refrescar" class="glyphicon glyphicon-refresh float-derecha" aria-hidden="true"></span>
+            </div>
+            <div id="formularios" class="animated">
+
+            </div>
+        </main>
+        
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/funciones.js" type="text/javascript"></script>
+        <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="js/jquery.priceformat.min.js" type="text/javascript" data-autoinit="true"></script>
+        <script src="js/moment.js" type="text/javascript"></script>
+        <script>
+            inicializar_menu();
+        </script>
+    </body>
+</html>

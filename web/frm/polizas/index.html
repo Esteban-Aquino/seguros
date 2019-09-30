@@ -1,0 +1,331 @@
+<div id="panel-formulario" class="panel panel-primary">
+    <div class="panel-heading centrado">
+        Polizas
+    </div>
+    <form id="formularioPoliza">  
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="id_poliza" class="form-control-static">Id</label>
+                </div>          
+                <div class="col-md-2">
+                    <input type="text"
+                           id="id_poliza"
+                           name="id_poliza"
+                           class="form-control input-sm"
+                           value="0"
+                           placeholder="Id">
+                </div>
+                <div class="col-md-1">
+                    <button type="button" id="botonBuscar" 
+                            class="btn btn-primary btn-sm"
+                            onclick="cargar_busqueda('frm/polizas/buscar_poliza.html')">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="id_cliente_poliza" class="form-control-static">Cliente</label>
+                </div>          
+                <div class="col-md-2">
+                    <input type="text"
+                           id="id_cliente_poliza"
+                           name="id_cliente_poliza"
+                           class="form-control input-sm"
+                           value="0"
+                           placeholder="Id">
+                </div>
+                <div class="col-md-1">
+                    <button type="button" id="botonBuscarCliente" 
+                            class="btn btn-primary btn-sm"
+                            onclick="cargar_busqueda('frm/polizas/buscar_cliente.html')">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </div>        
+                <div class="col-md-7">
+                    <input type="text"
+                           id="nombre_persona_cliente"
+                           name="nombre_persona_cliente"
+                           readonly="readonly"
+                           class="form-control input-sm"
+                           placeholder="Nombre cliente">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="id_aseguradora_poliza" class="form-control-static">Aseguradora</label>
+                </div>          
+                <div class="col-md-2">
+                    <input type="text"
+                           id="id_aseguradora_poliza"
+                           name="id_aseguradora_poliza"
+                           class="form-control input-sm"
+                           value="0"
+                           placeholder="Id">
+                </div>
+                <div class="col-md-1">
+                    <button type="button" id="botonBuscarAseguradora" 
+                            class="btn btn-primary btn-sm"
+                            onclick="cargar_busqueda('frm/polizas/buscar_aseguradora.html')">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </div>        
+                <div class="col-md-7">
+                    <input type="text"
+                           id="nombre_persona_aseguradora"
+                           name="nombre_persona_aseguradora"
+                           readonly="readonly"
+                           class="form-control input-sm"
+                           placeholder="Nombre aseguradora">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="id_vendedor_poliza" class="form-control-static">Vendedor</label>
+                </div>          
+                <div class="col-md-2">
+                    <input type="text"
+                           id="id_vendedor_poliza"
+                           name="id_vendedor_poliza"
+                           class="form-control input-sm"
+                           value="0"
+                           placeholder="Id">
+                </div>
+                <div class="col-md-1">
+                    <button type="button" id="botonBuscarVendedor" 
+                            class="btn btn-primary btn-sm"
+                            onclick="cargar_busqueda('frm/polizas/buscar_vendedor.html')">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </div>        
+                <div class="col-md-7">
+                    <input type="text"
+                           id="nombre_persona_vendedor"
+                           name="nombre_persona_vendedor"
+                           readonly="readonly"
+                           class="form-control input-sm"
+                           placeholder="Nombre vendedor">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <label class="form-control-static">Bienes a Asegurar:</label>
+                </div>
+                <div class="col-md-10">
+                    <table class="table table-bordered table-hover table-responsive table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width: 50px;">Id</th>
+                                <th >Tipo</th>
+                                <th >Marca</th>
+                                <th >Modelo</th>
+                                <th >Matricula</th>
+                                <th >Año</th>
+                                <th >Suma Asegurada</th>
+                                <th class="centrado" style="width: 50px;">
+                                    <button onclick="agregar_bien()" type="button" class="btn btn-primary btn-sm">
+                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                    </button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody_bienes_polizas">
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="6">Total: </td>
+                                <td><input type="text"
+                                           value="0"
+                                           readonly="readonly"
+                                           id="suma_asegurada_poliza" 
+                                           name="suma_asegurada_poliza"
+                                           class="form-control input-sm gs"
+                                           placeholder="Total"></td>
+                                <td>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="col-md-2">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="fecha_poliza" class="form-control-static">Fecha:</label>
+                        </div>
+                        <!--<div class="col-md-8">
+                            <input type="text"
+                                   id="fecha_poliza"
+                                   name="fecha_poliza"
+                                   class="form-control input-sm date"
+                                   placeholder="Fecha emision">
+                        </div>-->
+                        <div class="col-md-8">
+                            <input type="date" id="fecha_poliza" name="fecha_poliza" class="form-control input-sm">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="fecha_vencimiento_poliza" class="form-control-static">Vencimiento:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <!--<input type="text"
+                                   id="fecha_vencimiento_poliza"
+                                   name="fecha_vencimiento_poliza"
+                                   class="form-control input-sm date"
+                                   placeholder="Vigencia hasta">-->
+                            <input type="date" id="fecha_vencimiento_poliza" name="fecha_vencimiento_poliza" class="form-control input-sm">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="vigendia_desde_poliza" class="form-control-static">Vigencia:</label>
+                        </div>
+                        <div class="col-md-4">
+                            <!--<input type="text"
+                                   id="vigendia_desde_poliza"
+                                   name="vigendia_desde_poliza"
+                                   class="form-control input-sm date"
+                                   placeholder="Desde">-->
+                            <input type="date" id="vigendia_desde_poliza" name="vigendia_desde_poliza" class="form-control input-sm">
+                        </div>
+                        <div class="col-md-4">
+                            <!--<<input type="text"
+                                   id="vigencia_hasta_poliza"
+                                   name="vigencia_hasta_poliza"
+                                   class="form-control input-sm date"
+                                   placeholder="Hasta">-->
+                            <input type="date" id="vigencia_hasta_poliza" name="vigencia_hasta_poliza" class="form-control input-sm">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="seccion_poliza" class="form-control-static">Seccion:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="text"
+                                   id="seccion_poliza"
+                                   name="seccion_poliza"
+                                   class="form-control input-sm"
+                                   placeholder="Seccion">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="premio_poliza" class="form-control-static">Costo Total:</label>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text"
+                                   id="premio_poliza"
+                                   name="premio_poliza"
+                                   class="form-control input-sm gs"
+                                   placeholder="Costo total">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="cant_cuotas_poliza" class="form-control-static">Cuotas:</label>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text"
+                                   id="cant_cuotas_poliza"
+                                   name="cant_cuotas_poliza"
+                                   class="form-control input-sm gs"
+                                   placeholder="Cuotas">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="venc_inicial" class="form-control-static">Venc. Inicial:</label>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text"
+                                   id="venc_inicial"
+                                   name="venc_inicial"
+                                   class="form-control input-sm gs"
+                                   placeholder="Dias">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="intervalo_cuotas" class="form-control-static">Intervalo:</label>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text"
+                                   id="intervalo_cuotas"
+                                   name="intervalo_cuotas"
+                                   class="form-control input-sm gs"
+                                   placeholder="Dias">
+                        </div>
+                    </div>
+                </div>          
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12" >
+                            <table class="table table-bordered table-hover table-responsive table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10%;">Nro</th>
+                                        <th style="width: 30%;">Fecha</th>
+                                        <th style="width: 40%;">Monto </th>
+                                        <th style="width: 15%;">
+                                            <button onclick="generar_cuotas()" type="button" class="btn btn-primary btn-sm">
+                                                Generar Cuotas
+                                            </button>
+                                        </th>
+                                        <th style="width: 5%;">
+                                            <button onclick="nueva_cuota()" type="button" class="btn btn-primary btn-sm">
+                                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                            </button>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody_cuotas" >
+
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="2">Total: </td>
+                                        <td colspan="2"><input type="text"
+                                                   value="0"
+                                                   readonly="readonly"
+                                                   id="total_cuotas" 
+                                                   name="total_cuotas"
+                                                   class="form-control input-sm gs"
+                                                   placeholder="Total"></td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+    <div class="panel-footer centrado">
+        <button type="button" id="botonGuardar" class="btn btn-primary btn-sm">
+            <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Guardar
+        </button>
+        <button type="button" id="botonEliminar" class="btn btn-primary btn-sm">
+            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Eliminar
+        </button>
+        <button  type="button" id="botonSalir" class="btn btn-primary btn-sm">
+            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Salir
+        </button>
+    </div>
+    <script src="frm/polizas/js/funciones.js" type="text/javascript"></script>
+    <script>
+                                                inicializarFrmPolizas();
+    </script>
+
+</div>
